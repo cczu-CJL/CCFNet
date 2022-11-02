@@ -126,19 +126,15 @@ class NoBottleneck(nn.Module):
             # Projection also with pre-activation according to paper.
             self.downsample = nn.Conv2d(cin, cout, kernel_size=1, stride=stride, padding=0, bias=False)
             self.gn_proj = nn.GroupNorm(cout, cout)
-        # self.normal = nn.BatchNorm2d(cin)
-        # self.normal = nn.GroupNorm(32, cin, eps=1e-6)
         self.normal = nn.GroupNorm(1, cin, eps=1e-6)
 
     def forward(self, x):
         # Residual branch
         residual = x
-        # x = self.normal(x)
         if (self.stride != 1 or self.cin != self.cout):
             residual = self.downsample(x)
             residual = self.gn_proj(residual)
         x = self.normal(x)
-
 
         # Unit's branch
         y = self.gelu(self.gn1(self.conv1(x)))  # 1X1
