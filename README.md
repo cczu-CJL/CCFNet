@@ -6,7 +6,7 @@ This repo holds the code of CCFNet: Collaborative Cross-Fusion Network for Medic
 
 ## Model Overview
 <p align="center">
-    <img src="model.jpg"/> <br />
+    <img src = "model.jpg"/> <br />
 </p>
 
 ## Prepare data
