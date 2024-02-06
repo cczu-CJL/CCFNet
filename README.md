@@ -1,5 +1,5 @@
-# PFNet
-This repo holds the code of PFNet: A Parallel Fusion Network of CNN and Transformer for Medical Image Segmentation
+# CCFNet
+This repo holds the code of CCFNet: Collaborative Cross-Fusion Network for Medical Image Segmentation
 
 ## Environment
 - Please prepare an environment with python=3.7, and then use the command "pip install -r requirements.txt" for the dependencies.
@@ -19,5 +19,5 @@ This repo holds the code of PFNet: A Parallel Fusion Network of CNN and Transfor
 CUDA_VISIBLE_DEVICES=0 python train.py --dataset Synapse
 
 ## References
-* [TransUnet](https://github.com/Beckschen/TransUNet)
-* [Swin-Unet](https://github.com/HuCaoFighting/Swin-Unet)
+* [TransU](https://github.com/Beckschen/TransU)
+* [Swin-U](https://github.com/HuCaoFighting/Swin-U)
